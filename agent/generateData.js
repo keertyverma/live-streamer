@@ -1,5 +1,5 @@
 const io = require('socket.io-client'),
-    socket = io('http://localhost:5000'),
+    socket = io('http://localhost:5000/agent'),
     min = 10,
     max = 40,
     timeInterval = 3000, // every 1 sec

@@ -14,7 +14,7 @@ export default class SensorDataList extends Component {
     constructor(props) {
         super(props);
         this.state = { items: {}, running: true };
-        this.socket = socketIOClient('http://localhost:5000');
+        this.socket = socketIOClient('http://localhost:5000/ui');
         this.pausePlay = this.pausePlay.bind(this)
         this.play = this.play.bind(this)
 
@@ -49,6 +49,7 @@ export default class SensorDataList extends Component {
             console.info(data);
             this.setState((state) => {
                 state.items[data.timestamp] = data.metric_value
+                state.raw_data.push(data);
                 return state
             });
         });
