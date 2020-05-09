@@ -19,12 +19,13 @@
   },
   "homepage": "https://github.com/keertyverma/real-time-data-streamer#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "moment": "^2.25.3",
     "socket.io-client": "^2.3.0"
   }
 }

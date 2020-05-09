@@ -1,4 +1,5 @@
 let streamDataSocket;
+const dbConnection = require("../databaseConnection");
 
 module.exports = (app, io) => {
     app.post('/pause', function (req, res) {
@@ -15,17 +16,18 @@ module.exports = (app, io) => {
     io.on("connection", socket => {
         streamDataSocket = socket;
 
-
         socket.on('agent-data', function (data) {
             console.log(data)
             sendData(data);
         });
 
-        socket.on("connect", () => console.log("Socket connected"));
         socket.on("disconnect", () => console.log("Socket disconnected"));
     });
 
     const sendData = (data) => {
+        dbConnection.query('INSERT INTO sensor_data SET ?', data, (err, res) => {
+            if (err) throw err;
+        });
         streamDataSocket.emit("stream-data", data);
     }
 };

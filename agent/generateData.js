@@ -1,5 +1,3 @@
-const moment = require("moment");
-
 const io = require('socket.io-client'),
     socket = io('http://localhost:5000'),
     min = 10,
@@ -9,8 +7,10 @@ const io = require('socket.io-client'),
 
 const sendData = function () {
     let dataObject = {
-        temperature: Math.floor(Math.random() * (+max - +min)) + +min,
-        timestamp: moment.utc().toString()
+        category: "sensor_data",
+        metric_name: "temperature",
+        metric_value: Math.floor(Math.random() * (+max - +min)) + +min,
+        timestamp: (new Date()).toISOString().replace('Z', '')
     };
     console.log(dataObject);
     socket.emit('agent-data', dataObject);
