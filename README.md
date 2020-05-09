@@ -2,6 +2,8 @@
 
 A Full Stack Web Application to handle real-time data streaming with Node socket.
 
+Demo video: https://www.youtube.com/embed/alBiK9FD6pg and at `demo.webm` file
+
 ## Current stack
 
 - **Backend:** NodeJS v12, Socket.IO v2
