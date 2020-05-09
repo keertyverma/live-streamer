@@ -10,4 +10,4 @@ Solution:
 - Open mysql client
     - ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'my-secret-pw';
     - To refersh privileges
-        - flush privileges;
+     - flush privileges;
