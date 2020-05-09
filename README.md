@@ -96,7 +96,7 @@ A Full Stack Web Application to handle real-time data streaming with Node socket
    cd ui && npm start
    ```
 
-   This will start the React development server and open your browser at `http://localhost:3000`. The UI will connect to server via URL `http://locahost:5000`.
+   This will start the React development server and open your browser at `http://localhost:3000`. The UI will connect to backend server via URL `http://locahost:5000`.
 
 8. To start sending real-time data via agent, run this at root of folder
 
@@ -104,7 +104,7 @@ A Full Stack Web Application to handle real-time data streaming with Node socket
    node agent/generateData.js
    ```
 
-   This will connect to server via URL `http://localhost:5000` and start sending random generated data.
+   This will connect to backend server via URL `http://localhost:5000` and start sending random generated data.
 
 ## Things to Improve
 

@@ -5,10 +5,9 @@ import axios from 'axios';
 import socketIOClient from "socket.io-client";
 import ReactExport from "react-export-excel";
 
-const ExcelFile = ReactExport.ExcelFile;
-const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
-const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
-
+const ExcelFile = ReactExport.ExcelFile,
+    ExcelSheet = ReactExport.ExcelFile.ExcelSheet,
+    ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 export default class SensorDataList extends Component {
     constructor(props) {

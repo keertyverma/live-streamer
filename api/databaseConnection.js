@@ -1,3 +1,7 @@
+/* Read DB configuration details from .env file
+   Connect to msyql DB
+*/
+
 const mysql = require('mysql'),
     dotenv = require('dotenv');
 

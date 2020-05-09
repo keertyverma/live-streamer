@@ -1,8 +1,13 @@
+/* Generates random sensor temperature data at given timeInterval till given timeOut.
+   Connect to http://localhost:5000/agent socket-io client
+   Emits 'agent-data' event
+*/
+
 const io = require('socket.io-client'),
     socket = io('http://localhost:5000/agent'),
     min = 10,
     max = 40,
-    timeInterval = 3000, // every 1 sec
+    timeInterval = 100, // every 1/10 sec
     timeOut = 900000;   // after 15 min
 
 const sendData = function () {
