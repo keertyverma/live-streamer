@@ -25,9 +25,9 @@ module.exports = (app, io) => {
     });
 
     const sendData = (data) => {
+        streamDataSocket.emit("stream-data", data);
         dbConnection.query('INSERT INTO sensor_data SET ?', data, (err, res) => {
             if (err) throw err;
         });
-        streamDataSocket.emit("stream-data", data);
     }
 };
