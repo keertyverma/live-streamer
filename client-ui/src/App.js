@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import SensorDataList from "./components/sensor-data.component";
 
 function App() {
